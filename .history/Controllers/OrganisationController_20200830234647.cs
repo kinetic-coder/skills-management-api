@@ -82,7 +82,7 @@ namespace skills_management_api.Controllers
             _context.OrganisationItems.Add(organisation);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetOrganisation), new { id = organisation.Id }, organisation);
+            return CreatedAtAction("GetOrganisation", new { id = organisation.Id }, organisation);
         }
 
         // DELETE: api/Organisation/5
